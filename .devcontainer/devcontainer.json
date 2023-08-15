@@ -5,36 +5,39 @@
     // Or use a Dockerfile or Docker Compose file. More info: https://containers.dev/guide/dockerfile
     "image": "mcr.microsoft.com/devcontainers/base:jammy",
     "features": {
-        "ghcr.io/devcontainers/features/python:1": {
-            "installJupyterlab": true
-        },
+        "ghcr.io/dhoeric/features/google-cloud-cli:1": {},
         "ghcr.io/rocker-org/devcontainer-features/miniforge:1": {},
-        "ghcr.io/dhoeric/features/google-cloud-cli:1": {}
+        "docker-from-docker": {
+            "version": "latest",
+            "moby": true,
+            "dockerDashComposeVersion": "v1"
+        }
     },
     "customizations": {
         "vscode": {
             "extensions": [
-                "mhutchie.git-graph",
-                "shyykoserhiy.git-autoconfig",
-                "ms-python.vscode-pylance",
-                "GitHub.copilot-labs",
-                "GitHub.vscode-pull-request-github",
-                "ms-python.python",
-                "VisualStudioExptTeam.vscodeintellicode",
-                "ms-toolsai.vscode-jupyter-slideshow",
-                "mervin.markdown-formatter",
-                "ms-toolsai.jupyter-renderers",
-                "ms-toolsai.vscode-jupyter-powertoys",
-                "ms-toolsai.jupyter-keymap",
-                "ms-toolsai.vscode-jupyter-cell-tags",
-                "ms-toolsai.jupyter",
-                "ms-python.isort",
-                "VisualStudioExptTeam.intellicode-api-usage-examples",
-                "GitHub.copilot-nightly",
-                "GitHub.copilot-chat",
-                "ms-python.pylint",
-                "ms-python.black-formatter"
-            ]
+				"GitHub.copilot-chat",
+				"GitHub.copilot-labs",
+				"GitHub.copilot-nightly",
+				"GitHub.vscode-pull-request-github",
+				"mervin.markdown-formatter",
+				"mhutchie.git-graph",
+				"ms-python.black-formatter",
+				"ms-python.isort",
+				"ms-python.pylint",
+				"ms-python.python",
+				"ms-python.vscode-pylance",
+				"ms-toolsai.jupyter",
+				"ms-toolsai.jupyter-keymap",
+				"ms-toolsai.jupyter-renderers",
+				"ms-toolsai.vscode-jupyter-cell-tags",
+				"ms-toolsai.vscode-jupyter-powertoys",
+				"ms-toolsai.vscode-jupyter-slideshow",
+				"shyykoserhiy.git-autoconfig",
+				"VisualStudioExptTeam.intellicode-api-usage-examples",
+				"VisualStudioExptTeam.vscodeintellicode",
+				"ms-azuretools.vscode-docker"
+			]
         }
     },
     "postCreateCommand": "bash .devcontainer/post-create.sh"

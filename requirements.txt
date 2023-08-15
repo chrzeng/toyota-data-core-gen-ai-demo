@@ -1,9 +1,0 @@
-google-cloud-aiplatform
-db-dtypes
-matplotlib
-pybase64
-pandas
-langchain[all]
-retry
-numpy
-streamlit

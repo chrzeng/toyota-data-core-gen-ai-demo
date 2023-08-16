@@ -10,4 +10,5 @@ dependencies:
   - langchain[all]
   - retry
   - numpy
-  - streamlit
+  - streamlit 
+  - streamlit_chat
